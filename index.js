@@ -11,7 +11,12 @@ connectDb()
 
 // make sure you always put this function directly under "connectDb" function
 // middleware
+
+// this allows us input encoded values in json format
 app.use(express.json())
+
+// to use url encoded values insted of json
+app.use(express.urlencoded({extended : true}))
 
 
 // importing user routes
